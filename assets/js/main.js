@@ -48,10 +48,10 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 2000,
     delay: 200,
-//     reset: true
+    // reset: true
 });
 
-sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
-sr.reveal('.home__social-icon',{ interval: 200}); 
-sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+sr.reveal('.section-title', {});
+sr.reveal('.work__img', { interval: 200 });
+sr.reveal('.contact__input', { interval: 200 });
+sr.reveal('.footer__icon', { interval: 200 });
