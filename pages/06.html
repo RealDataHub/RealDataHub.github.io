@@ -3,12 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Redirecting to Art Residences of North America.">
-    <meta http-equiv="refresh" content="0; url=https://art-residences-america.vercel.app/">
+    <meta name="description" content="Art Residencies Across North America - Mapping and classification project exploring geographic distribution of artist residency programs.">
     <link rel="canonical" href="https://art-residences-america.vercel.app/">
-    <title>USA art residences</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Art Residencies Across North America</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .image-section {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-section {
+            padding: 2rem;
+            line-height: 1.8;
+            color: hsl(224, 56%, 12%);
+            font-size: 1rem;
+        }
+        .text-section p {
+            margin-bottom: 1rem;
+        }
+        .text-section p:last-child {
+            margin-bottom: 0;
+        }
+        .redirect-notice {
+            text-align: center;
+            margin-top: 2rem;
+            color: hsl(224, 89%, 60%);
+            font-weight: 600;
+        }
+        @media screen and (min-width: 768px) {
+            .container {
+                padding: 2rem 0;
+            }
+            .text-section {
+                font-size: 1.1rem;
+                padding: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="https://art-residences-america.vercel.app/">Art Residences of North America</a>.</p>
+    <div class="container">
+        <div class="image-section">
+            <img src="../assets/img/an12.jpg" alt="Art Residences of North America" title="USA art residences">
+        </div>
+        <div class="text-section">
+            <p>Art Residencies Across North America is a mapping and classification project exploring the geographic distribution and thematic diversity of artist residency programs throughout the continent.</p>
+            <p>The research identifies residency specializations across approximately 80 creative disciplines, each represented on the interactive map through distinct icons. This visual system allows users to quickly understand the artistic focus of individual programs.</p>
+            <p>The app enables filtering by discipline type, allowing users to explore all creative fields supported within each residency. Direct links to official residency websites are provided, giving access to current open calls and application information.</p>
+        </div>
+        <div class="redirect-notice">
+            <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 15;
+        const countdownElement = document.getElementById('countdown');
+        const targetUrl = 'https://art-residences-america.vercel.app/';
+
+        // Update countdown every second
+        const countdownInterval = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+
+        // Redirect after 30 seconds
+        setTimeout(() => {
+            window.location.href = targetUrl;
+        }, 15000);
+    </script>
 </body>
 </html>

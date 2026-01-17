@@ -3,12 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Redirecting to world metropolitan population growth forecast.">
-    <meta http-equiv="refresh" content="0; url=https://metroregions-1975-2125.vercel.app/">
-    <link rel="canonical" href="https://metroregions-1975-2125.vercel.app/">
-    <title>world metropolitan population growth forecast</title>
+    <meta name="description" content="Global Map of Metropolises in 2125 - Speculative urban research project exploring long-term evolution of metropolitan regions.">
+    <link rel="canonical" href="https://art-residences-america.vercel.app/">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Global Map of Metropolises in 2125</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .image-section {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-section {
+            padding: 2rem;
+            line-height: 1.8;
+            color: hsl(224, 56%, 12%);
+            font-size: 1rem;
+        }
+        .text-section p {
+            margin-bottom: 1rem;
+        }
+        .text-section p:last-child {
+            margin-bottom: 0;
+        }
+        .redirect-notice {
+            text-align: center;
+            margin-top: 2rem;
+            color: hsl(224, 89%, 60%);
+            font-weight: 600;
+        }
+        @media screen and (min-width: 768px) {
+            .container {
+                padding: 2rem 0;
+            }
+            .text-section {
+                font-size: 1.1rem;
+                padding: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="https://metroregions-1975-2125.vercel.app/">world metropolitan population growth forecast</a>.</p>
+    <div class="container">
+        <div class="image-section">
+            <img src="../assets/img/an18.jpg" alt="world metropolitan population growth forecast" title="world metropolitan population growth forecast">
+        </div>
+        <div class="text-section">
+            <p>Global Map of Metropolises in 2125 is a speculative urban research project exploring the long-term evolution of the world's largest metropolitan regions.</p>
+            <p>In The Art of Shaping the Metropolis, Pedro B. Ortiz argues that metropolises are expanding at an unprecedented scale in human history. Their systems of governance have become comparable in complexity to those of nation-states, while their economic, political, and cultural influence increasingly concentrates global power. Some futurists have even suggested that the United Nations could one day evolve into a body of "United Metropolises."</p>
+            <p>Building on this premise, the project investigates how approximately 1,000 metropolises may grow, stabilize, or decline by the year 2125. The analysis acknowledges critical demographic forces—particularly declining fertility rates in developed countries—alongside broader trends such as urban concentration, migration, and regional imbalance.</p>
+            <p>The timeline begins in 1975 and extends across 150 years of global urbanization, offering a long-range perspective on metropolitan transformation and the possible future geography of human settlement.</p>
+        </div>
+        <div class="redirect-notice">
+            <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 15;
+        const countdownElement = document.getElementById('countdown');
+        const targetUrl = 'https://art-residences-america.vercel.app/';
+
+        // Update countdown every second
+        const countdownInterval = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+
+        // Redirect after 30 seconds
+        setTimeout(() => {
+            window.location.href = targetUrl;
+        }, 15000);
+    </script>
 </body>
 </html>

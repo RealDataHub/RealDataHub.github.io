@@ -3,12 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Redirecting to Eco-villages of South Europe application.">
-    <meta http-equiv="refresh" content="0; url=https://ecoaldeaes.streamlit.app/">
+    <meta name="description" content="Eco-villages of South Europe - Research project analyzing eco-conscious cooperation and community cohesion.">
     <link rel="canonical" href="https://ecoaldeaes.streamlit.app/">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Eco-villages of South Europe</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .image-section {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-section {
+            padding: 2rem;
+            line-height: 1.8;
+            color: hsl(224, 56%, 12%);
+            font-size: 1rem;
+        }
+        .text-section p {
+            margin-bottom: 1rem;
+        }
+        .text-section p:last-child {
+            margin-bottom: 0;
+        }
+        .redirect-notice {
+            text-align: center;
+            margin-top: 2rem;
+            color: hsl(224, 89%, 60%);
+            font-weight: 600;
+        }
+        @media screen and (min-width: 768px) {
+            .container {
+                padding: 2rem 0;
+            }
+            .text-section {
+                font-size: 1.1rem;
+                padding: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="https://ecoaldeaes.streamlit.app/">Eco-villages of Spain</a>.</p>
+    <div class="container">
+        <div class="image-section">
+            <img src="../assets/img/an7.jpg" alt="eco-villages of South Europe" title="eco-villages of South Europe">
+        </div>
+        <div class="text-section">
+            <p>Eco-Settlements of Southern Europe is a research project that began with mapping initiatives in Spain and Portugal. The initial aim is to explore the field of environmentally friendly communities, typologies of eco-conscious cooperation, and diverse approaches to community cohesion.</p>
+            <p>The research investigates a wide spectrum of co-living models: from family-run biodynamic farms in remote mountain areas to cooperative developments united by religion or ideology; from zero-energy, nature-friendly condominium construction projects to the rehabilitation of abandoned villages by groups of like-minded people.</p>
+            <p>The project covers initiatives ranging from social escapism to startup ventures, from tech-savvy agricultural rehabilitation projects with a solid scientific background to vibrant art residencies.</p>
+            <p>The database includes a short description, key information, a motto, and an active link for each settlement, where more detailed material can be found. Settlements are categorized by active and closed status.</p>
+            <p>The project is ongoing, and we continue to search for new discoveries.</p>
+        </div>
+        <div class="redirect-notice">
+            <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 15;
+        const countdownElement = document.getElementById('countdown');
+        const targetUrl = 'https://ecoaldeaes.streamlit.app/';
+
+        // Update countdown every second
+        const countdownInterval = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+
+        // Redirect after 30 seconds
+        setTimeout(() => {
+            window.location.href = targetUrl;
+        }, 15000);
+    </script>
 </body>
 </html>

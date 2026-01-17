@@ -3,12 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Redirecting to airbnb industry of Greater Venezia.">
-    <meta http-equiv="refresh" content="0; url=https://venice-airbnb.vercel.app/">
-    <link rel="canonical" href="https://venice-airbnb.vercel.app/">
-    <title>airbnb industry of Greater Venezia</title>
+    <meta name="description" content="Urban Scale of Venice Through the Prism of the Airbnb Effect - Spatial research project examining short-term rentals impact.">
+    <link rel="canonical" href="https://wildfire-index-zair.vercel.app/">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Urban Scale of Venice Through the Prism of the Airbnb Effect</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .image-section {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-section {
+            padding: 2rem;
+            line-height: 1.8;
+            color: hsl(224, 56%, 12%);
+            font-size: 1rem;
+        }
+        .text-section p {
+            margin-bottom: 1rem;
+        }
+        .text-section p:last-child {
+            margin-bottom: 0;
+        }
+        .redirect-notice {
+            text-align: center;
+            margin-top: 2rem;
+            color: hsl(224, 89%, 60%);
+            font-weight: 600;
+        }
+        @media screen and (min-width: 768px) {
+            .container {
+                padding: 2rem 0;
+            }
+            .text-section {
+                font-size: 1.1rem;
+                padding: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="https://venice-airbnb.vercel.app/">airbnb industry of Greater Venezia</a>.</p>
+    <div class="container">
+        <div class="image-section">
+            <img src="../assets/img/an17.jpg" alt="airbnb industry of Greater Venezia" title="airbnb industry of Greater Venezia">
+        </div>
+        <div class="text-section">
+            <p>Urban Scale of Venice Through the Prism of the Airbnb Effect is a spatial research project examining the impact of short-term rentals on the historic fabric and residential life of Venice.</p>
+            <p>Over the past decade, Airbnb rapidly spread throughout the city center, transforming former residential homes into short-stay accommodations and displacing long-term residents. As entire buildings shifted toward tourist use, Venice began to hollow out as a living city.</p>
+            <p>In response, Italy introduced the CIN registration system to track short-term rentals, enforced new safety requirements, and obliged platforms to remove unregistered listings. Venice implemented additional local measures, including experimental limits of 120 rental days per year, mandatory SCIA filings, in-person guest check-ins, and stricter waste management and identification rules. Despite these efforts, inspections revealed that a substantial share of listings still operated without valid CIN codes. Parallel measures—such as the introduction of a day-trip access fee and temporary restrictions on remote check-ins—reflect a broader attempt to rebalance tourism pressure.</p>
+            <p>This interactive map presents aggregated Airbnb listing data at building and neighborhood scales for 2022–2023, prior to the implementation of the strict regulatory framework. The visualization reveals the total number of listings per building and area, accumulated nightly prices, guest capacity per night, and estimated annual accommodation capacity—offering a data-driven perspective on the scale of short-term rental pressure across Venice.</p>
+        </div>
+        <div class="redirect-notice">
+            <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 15;
+        const countdownElement = document.getElementById('countdown');
+        const targetUrl = 'https://wildfire-index-zair.vercel.app/';
+
+        // Update countdown every second
+        const countdownInterval = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+
+        // Redirect after 30 seconds
+        setTimeout(() => {
+            window.location.href = targetUrl;
+        }, 15000);
+    </script>
 </body>
 </html>

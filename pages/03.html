@@ -3,12 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Redirecting to Analysis of Local Tax Policy in Spanish cities.">
-    <meta http-equiv="refresh" content="0; url=https://iciotax.vercel.app/">
+    <meta name="description" content="Analysis of Local Tax Policy in Spanish cities - ICIO tax research.">
     <link rel="canonical" href="https://iciotax.vercel.app/">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Analysis of Local Tax Policy. Municipal tax ICIO in Spanish cities</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .image-section {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-section {
+            padding: 2rem;
+            line-height: 1.8;
+            color: hsl(224, 56%, 12%);
+            font-size: 1rem;
+        }
+        .text-section p {
+            margin-bottom: 1rem;
+        }
+        .text-section p:last-child {
+            margin-bottom: 0;
+        }
+        .redirect-notice {
+            text-align: center;
+            margin-top: 2rem;
+            color: hsl(224, 89%, 60%);
+            font-weight: 600;
+        }
+        @media screen and (min-width: 768px) {
+            .container {
+                padding: 2rem 0;
+            }
+            .text-section {
+                font-size: 1.1rem;
+                padding: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="https://iciotax.vercel.app/">ICIO Tax in Spain</a>.</p>
+    <div class="container">
+        <div class="image-section">
+            <img src="../assets/img/an9.jpg" alt="local tax policies in construction" title="ICIO tax">
+        </div>
+        <div class="text-section">
+            <p>Dimension of Local Policies in Construction is a research initiative focused on the analysis of municipal taxation related to construction, installation, and renovation works in Spain, specifically the Impuesto sobre Construcciones, Instalaciones y Obras (ICIO).</p>
+            <p>The project examines local ICIO regulations across 145 Spanish cities and includes a dedicated tax calculator that incorporates additional constraints and potential deductions, using Madrid as a reference case.</p>
+            <p>The research reveals significant regional variation: Melilla applies a 0% ICIO rate, while municipalities in the Basque Country impose some of the highest rates in Spain, reaching up to 5%.</p>
+            <p>By analyzing the scope of local fiscal policies within the construction sector, the project identifies structural patterns and regional trends that influence construction activity and urban development.</p>
+        </div>
+        <div class="redirect-notice">
+            <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 15;
+        const countdownElement = document.getElementById('countdown');
+        const targetUrl = 'https://iciotax.vercel.app/';
+
+        // Update countdown every second
+        const countdownInterval = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+
+        // Redirect after 30 seconds
+        setTimeout(() => {
+            window.location.href = targetUrl;
+        }, 15000);
+    </script>
 </body>
 </html>

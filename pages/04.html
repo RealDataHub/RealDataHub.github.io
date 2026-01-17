@@ -3,12 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Redirecting to Interactive 10-min accessibility map of Dubai.">
-    <meta http-equiv="refresh" content="0; url=https://dubai-accessibility-map.vercel.app/">
+    <meta name="description" content="School Accessibility in Dubai - Spatial analysis project examining walking accessibility around public transit.">
     <link rel="canonical" href="https://dubai-accessibility-map.vercel.app/">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Interactive 10-min accessibility map of Dubai</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .image-section {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-section {
+            padding: 2rem;
+            line-height: 1.8;
+            color: hsl(224, 56%, 12%);
+            font-size: 1rem;
+        }
+        .text-section p {
+            margin-bottom: 1rem;
+        }
+        .text-section p:last-child {
+            margin-bottom: 0;
+        }
+        .redirect-notice {
+            text-align: center;
+            margin-top: 2rem;
+            color: hsl(224, 89%, 60%);
+            font-weight: 600;
+        }
+        @media screen and (min-width: 768px) {
+            .container {
+                padding: 2rem 0;
+            }
+            .text-section {
+                font-size: 1.1rem;
+                padding: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="https://dubai-accessibility-map.vercel.app/">Interactive 10-min accessibility map of Dubai</a>.</p>
+    <div class="container">
+        <div class="image-section">
+            <img src="../assets/img/an10.jpg" alt="10-min accessibility map Dubai" title="accessibility map Dubai">
+        </div>
+        <div class="text-section">
+            <p>School Accessibility in Dubai is a spatial analysis project examining how many schools fall within 5- to 15-minute walking catchment areas of the city's rail-based public transport network.</p>
+            <p>While walking accessibility is not the primary framework for understanding mobility in a city shaped by a harsh climate and car-oriented urban structure, the analysis provides valuable insight into pedestrian access around public transit in the "Pearl of the Middle East."</p>
+            <p>The study reveals that a significant share of schools lies outside the 15-minute walking isochrones of Dubai's Metro, Tram, and Monorail stations.</p>
+            <p>The interactive map application enables users to generate 5-, 10-, and 15-minute walking isochrones around transit stations or to load pre-calculated datasets. Powered by Cesium technology, the platform offers a fully immersive 3D exploration of Dubai's dynamic urban landscape.</p>
+        </div>
+        <div class="redirect-notice">
+            <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 15;
+        const countdownElement = document.getElementById('countdown');
+        const targetUrl = 'https://dubai-accessibility-map.vercel.app/';
+
+        // Update countdown every second
+        const countdownInterval = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+
+        // Redirect after 30 seconds
+        setTimeout(() => {
+            window.location.href = targetUrl;
+        }, 15000);
+    </script>
 </body>
 </html>

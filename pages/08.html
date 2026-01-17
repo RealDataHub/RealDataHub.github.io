@@ -3,12 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Redirecting to Architectural high schools of Africa.">
-    <meta http-equiv="refresh" content="0; url=https://africa-archschools.vercel.app/">
-    <link rel="canonical" href="https://africa-archschools.vercel.app/">
-    <title>Architectural high schools of Africa</title>
+    <meta name="description" content="Architectural Education in Africa - Continental-scale research examining spatial distribution of architecture schools.">
+    <link rel="canonical" href="https://colegios-cataluna.vercel.app/">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Architectural Education in Africa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .image-section {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-section {
+            padding: 2rem;
+            line-height: 1.8;
+            color: hsl(224, 56%, 12%);
+            font-size: 1rem;
+        }
+        .text-section p {
+            margin-bottom: 1rem;
+        }
+        .text-section p:last-child {
+            margin-bottom: 0;
+        }
+        .redirect-notice {
+            text-align: center;
+            margin-top: 2rem;
+            color: hsl(224, 89%, 60%);
+            font-weight: 600;
+        }
+        @media screen and (min-width: 768px) {
+            .container {
+                padding: 2rem 0;
+            }
+            .text-section {
+                font-size: 1.1rem;
+                padding: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="https://africa-archschools.vercel.app/">Architectural high schools of Africa</a>.</p>
+    <div class="container">
+        <div class="image-section">
+            <img src="../assets/img/an14.jpg" alt="Architectural high schools of Africa" title="Architectural high schools of Africa">
+        </div>
+        <div class="text-section">
+            <p>Architectural Education in Africa is a continental-scale research project examining the spatial distribution and functional reach of architecture schools across the continent.</p>
+            <p>The study identifies 146 educational institutions providing architectural training across 52 countries and regions. Their areas of influence are analyzed using Voronoi cell mapping, constrained by a 200-mile buffer around Africa to reflect realistic spatial accessibility.</p>
+            <p>Rather than emphasizing national or regional divisions, the analysis reveals transnational educational clusters whose influence extends across multiple official borders. These overlapping zones highlight how academic ecosystems often form independently of political frontiers, driven instead by population density, historical ties, language networks, and urban gravity.</p>
+            <p>The resulting map uncovers corridors of concentrated architectural education alongside extensive gaps in institutional coverage, offering a spatial perspective on how knowledge infrastructure in Africa could operate beyond administrative boundaries.</p>
+        </div>
+        <div class="redirect-notice">
+            <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 15;
+        const countdownElement = document.getElementById('countdown');
+        const targetUrl = 'https://colegios-cataluna.vercel.app/';
+
+        // Update countdown every second
+        const countdownInterval = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+
+        // Redirect after 30 seconds
+        setTimeout(() => {
+            window.location.href = targetUrl;
+        }, 15000);
+    </script>
 </body>
 </html>
