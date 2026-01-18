@@ -30,6 +30,7 @@
             width: 100%;
             height: auto;
             display: block;
+            cursor: pointer;
         }
         .text-section {
             padding: 2rem;
@@ -62,14 +63,14 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-section">
-            <img src="../assets/img/an18.jpg" alt="world metropolitan population growth forecast" title="world metropolitan population growth forecast">
-        </div>
         <div class="text-section">
             <p>Global Map of Metropolises in 2125 is a speculative urban research project exploring the long-term evolution of the world's largest metropolitan regions.</p>
             <p>In The Art of Shaping the Metropolis, Pedro B. Ortiz argues that metropolises are expanding at an unprecedented scale in human history. Their systems of governance have become comparable in complexity to those of nation-states, while their economic, political, and cultural influence increasingly concentrates global power. Some futurists have even suggested that the United Nations could one day evolve into a body of "United Metropolises."</p>
             <p>Building on this premise, the project investigates how approximately 1,000 metropolises may grow, stabilize, or decline by the year 2125. The analysis acknowledges critical demographic forces—particularly declining fertility rates in developed countries—alongside broader trends such as urban concentration, migration, and regional imbalance.</p>
             <p>The timeline begins in 1975 and extends across 150 years of global urbanization, offering a long-range perspective on metropolitan transformation and the possible future geography of human settlement.</p>
+        </div>
+        <div class="image-section">
+            <img src="../assets/img/an18.jpg" alt="redirect now!" title="do not wait, redirect now to app - world metropolitan population growth forecast" onclick="window.location.href = targetUrl;">
         </div>
         <div class="redirect-notice">
             <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
@@ -79,7 +80,7 @@
     <script>
         let timeLeft = 15;
         const countdownElement = document.getElementById('countdown');
-        const targetUrl = 'https://art-residences-america.vercel.app/';
+        var targetUrl = 'https://art-residences-america.vercel.app/';
 
         // Update countdown every second
         const countdownInterval = setInterval(() => {

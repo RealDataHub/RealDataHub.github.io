@@ -30,6 +30,7 @@
             width: 100%;
             height: auto;
             display: block;
+            cursor: pointer;
         }
         .text-section {
             padding: 2rem;
@@ -62,14 +63,14 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-section">
-            <img src="../assets/img/an14.jpg" alt="Architectural high schools of Africa" title="Architectural high schools of Africa">
-        </div>
         <div class="text-section">
             <p>Architectural Education in Africa is a continental-scale research project examining the spatial distribution and functional reach of architecture schools across the continent.</p>
             <p>The study identifies 146 educational institutions providing architectural training across 52 countries and regions. Their areas of influence are analyzed using Voronoi cell mapping, constrained by a 200-mile buffer around Africa to reflect realistic spatial accessibility.</p>
             <p>Rather than emphasizing national or regional divisions, the analysis reveals transnational educational clusters whose influence extends across multiple official borders. These overlapping zones highlight how academic ecosystems often form independently of political frontiers, driven instead by population density, historical ties, language networks, and urban gravity.</p>
             <p>The resulting map uncovers corridors of concentrated architectural education alongside extensive gaps in institutional coverage, offering a spatial perspective on how knowledge infrastructure in Africa could operate beyond administrative boundaries.</p>
+        </div>
+        <div class="image-section">
+            <img src="../assets/img/an14.jpg" alt="redirect now!" title="do not wait, redirect now to app - Architectural high schools of Africa" onclick="window.location.href = targetUrl;">
         </div>
         <div class="redirect-notice">
             <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
@@ -79,7 +80,7 @@
     <script>
         let timeLeft = 15;
         const countdownElement = document.getElementById('countdown');
-        const targetUrl = 'https://colegios-cataluna.vercel.app/';
+        var targetUrl = 'https://colegios-cataluna.vercel.app/';
 
         // Update countdown every second
         const countdownInterval = setInterval(() => {

@@ -30,6 +30,7 @@
             width: 100%;
             height: auto;
             display: block;
+            cursor: pointer;
         }
         .text-section {
             padding: 2rem;
@@ -62,15 +63,15 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-section">
-            <img src="../assets/img/an11.jpg" alt="Democratic Republic of the Congo - Wildfire Risk Map" title="DRC Wildfire Risk Map">
-        </div>
         <div class="text-section">
             <p>Wildfire Index of the Democratic Republic of the Congo is a spatial risk assessment project analyzing wildfire susceptibility across the country under current environmental and human-influenced conditions.</p>
             <p>A wildfire index is a numerical indicator that estimates the likelihood of fires starting, spreading, and intensifying based on environmental drivers. The DRC Wildfire Index applies this concept through a composite risk model that quantifies wildfire vulnerability across the national territory.</p>
             <p>The index integrates multiple environmental and anthropogenic factors—including historical fire frequency, land surface temperature (fire weather), vegetation condition, population density, and terrain slope—into a single normalized scale from 0 (low risk) to 1 (high risk). Each variable is weighted according to its relative influence on fire behavior: historical fires (25%), fire weather (25%), vegetation (20%), population density (15%), and terrain characteristics (15%).</p>
             <p>Developed using a weighted linear combination methodology, the index provides a spatially explicit, data-driven framework for identifying areas most exposed to wildfire risk. It supports decision-makers, land managers, and emergency response agencies in prioritizing monitoring efforts, allocating resources, and designing targeted prevention strategies.</p>
             <p>The project relies on freely available NASA Earth observation data, including MODIS satellite products and SRTM elevation models, processed with open-source geospatial tools to ensure transparency, reproducibility, and applicability in contexts such as the DRC, where limited ground-based monitoring infrastructure makes satellite-based analysis essential.</p>
+        </div>
+        <div class="image-section">
+            <img src="../assets/img/an11.jpg" alt="redirect now!" title="do not wait, redirect now to app - DRC Wildfire Risk Map" onclick="window.location.href = targetUrl;">
         </div>
         <div class="redirect-notice">
             <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
@@ -80,7 +81,7 @@
     <script>
         let timeLeft = 15;
         const countdownElement = document.getElementById('countdown');
-        const targetUrl = 'https://wildfire-index-zair.vercel.app/';
+        var targetUrl = 'https://wildfire-index-zair.vercel.app/';
 
         // Update countdown every second
         const countdownInterval = setInterval(() => {

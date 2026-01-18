@@ -30,6 +30,7 @@
             width: 100%;
             height: auto;
             display: block;
+            cursor: pointer;
         }
         .text-section {
             padding: 2rem;
@@ -62,12 +63,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-section">
-            <img src="../assets/img/an15.jpg" alt="civil aviation industry of Brazil" title="civil aviation industry of Brazil">
-        </div>
         <div class="text-section">
             <p>3D Map of Brazil's Air Transport Industry is a spatial visualization project exploring one of the largest and most complex aviation networks in the world.</p>
             <p>The interactive map presents Brazil's national air transport system in three dimensions, illustrating the geographic distribution of airports alongside active flight routes. Using open data from OpenSky Network and OpenFlights, the project translates real-world aviation movements into a dynamic spatial model.</p>
+        </div>
+        <div class="image-section">
+            <img src="../assets/img/an15.jpg" alt="redirect now!" title="do not wait, redirect now to app - civil aviation industry of Brazil" onclick="window.location.href = targetUrl;">
         </div>
         <div class="redirect-notice">
             <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
@@ -77,7 +78,7 @@
     <script>
         let timeLeft = 15;
         const countdownElement = document.getElementById('countdown');
-        const targetUrl = 'https://iciotax.vercel.app/';
+        var targetUrl = 'https://iciotax.vercel.app/';
 
         // Update countdown every second
         const countdownInterval = setInterval(() => {
