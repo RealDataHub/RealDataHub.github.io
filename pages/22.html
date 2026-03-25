@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Heritage buffer zones and real estate prices in European cities.">
+    <link rel="canonical" href="https://heritage2-cost-correlation-analysis.vercel.app/">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Heritage Cost Correlation Analysis</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .image-section {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+        }
+        .text-section {
+            padding: 2rem;
+            line-height: 1.8;
+            color: hsl(224, 56%, 12%);
+            font-size: 1rem;
+        }
+        .text-section p, .text-section ul {
+            margin-bottom: 1rem;
+        }
+        .text-section p:last-child, .text-section ul:last-child {
+            margin-bottom: 0;
+        }
+        .text-section h3 {
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .redirect-notice {
+            text-align: center;
+            margin-top: 2rem;
+            color: hsl(224, 89%, 60%);
+            font-weight: 600;
+        }
+        @media screen and (min-width: 768px) {
+            .container {
+                padding: 2rem 0;
+            }
+            .text-section {
+                font-size: 1.1rem;
+                padding: 2.5rem;
+            }
+            .text-section h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-section">
+            <h3>Research Question</h3>
+            <p><strong>Do heritage buffer zones affect real estate prices in European cities?</strong></p>
+            <p>This study examines the spatial relationship between heritage sites (historic buildings, monuments, archaeological sites) and residential property sale prices in Barcelona, using the city's 73 neighborhoods (barris) as the unit of analysis. The weak positive correlation (r = 0.1844) suggests that heritage proximity is one contributing factor to property prices but is far from the dominant one. Several explanations:</p>
+            <ul>
+                <li><strong>Heritage as amenity, not driver:</strong> Heritage sites contribute to neighborhood attractiveness (tourism, cultural value, walkability, aesthetic quality), but other factors — centrality, transport access, building quality, commercial density — dominate pricing.</li>
+                <li><strong>Confounding with centrality:</strong> Barcelona's heritage is concentrated in the historic center, which is also the most accessible, most touristic, and most commercially active area. The heritage-price correlation may partially reflect a centrality premium rather than a heritage premium per se.</li>
+                <li><strong>Counter-examples weaken the correlation:</strong> The city's most expensive neighborhoods (Pedralbes: ~7,500 EUR/m2, Sarrià: ~6,800 EUR/m2) have few heritage sites but high prices driven by exclusivity, space, and green areas. Conversely, some heritage-rich areas like el Raval (4,250 EUR/m2) have moderate prices due to socioeconomic factors.</li>
+                <li><strong>Heritage condition matters:</strong> The hypothesis that heritage renovation programs could uplift prices in underperforming heritage zones remains untested in this study but is suggested by the spatial lag analysis — neighborhoods adjacent to high-price heritage zones show price spillover effects.</li>
+            </ul>
+        </div>
+        <div class="image-section">
+            <img src="../assets/img/an1.jpg" alt="redirect now!" title="do not wait, redirect now to app - heritage cost correlation analysis" onclick="window.location.href = targetUrl;">
+        </div>
+        <div class="redirect-notice">
+            <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 15;
+        const countdownElement = document.getElementById('countdown');
+        var targetUrl = 'https://heritage2-cost-correlation-analysis.vercel.app/';
+
+        // Update countdown every second
+        const countdownInterval = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+
+        // Redirect after 15 seconds
+        setTimeout(() => {
+            window.location.href = targetUrl;
+        }, 15000);
+    </script>
+</body>
+</html>
