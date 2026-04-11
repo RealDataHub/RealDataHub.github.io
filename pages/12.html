@@ -70,33 +70,15 @@
             <p>The timeline begins in 1975 and extends across 150 years of global urbanization, offering a long-range perspective on metropolitan transformation and the possible future geography of human settlement.</p>
         </div>
         <div class="image-section">
-            <img src="../assets/img/an18.jpg" alt="redirect now!" title="do not wait, redirect now to app - world metropolitan population growth forecast" onclick="window.location.href = targetUrl;">
+            <img src="../assets/img/an18.jpg" alt="redirect now!" title="do not wait, redirect now to app - world metropolitan population growth forecast" onclick="window.location.href='12_app.html';">
         </div>
-        <div class="redirect-notice">
-            <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
+        <div class="redirect-notice" id="notice">
+            <p>Click the image above to open the application in full screen.</p>
         </div>
     </div>
 
     <script>
-        let timeLeft = 15;
-        const countdownElement = document.getElementById('countdown');
-        var targetUrl = 'https://metroregions-1975-2125.vercel.app/';
-
-        // Update countdown every second
-        const countdownInterval = setInterval(() => {
-            timeLeft--;
-            countdownElement.textContent = timeLeft;
-            
-            if (timeLeft <= 0) {
-                clearInterval(countdownInterval);
-                window.location.href = targetUrl;
-            }
-        }, 1000);
-
-        // Redirect after 30 seconds
-        setTimeout(() => {
-            window.location.href = targetUrl;
-        }, 15000);
+        // the app is loaded on click
     </script>
 </body>
 </html>

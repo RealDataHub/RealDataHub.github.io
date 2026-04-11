@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Wildfire Index of the Democratic Republic of the Congo - Spatial risk assessment analyzing wildfire susceptibility.">
-    <link rel="canonical" href="https://wildfire-index-zair.vercel.app/">
+    <link rel="canonical" href="05_app.html">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Wildfire Index of the Democratic Republic of the Congo</title>
     <style>
@@ -71,33 +71,15 @@
             <p>The project relies on freely available NASA Earth observation data, including MODIS satellite products and SRTM elevation models, processed with open-source geospatial tools to ensure transparency, reproducibility, and applicability in contexts such as the DRC, where limited ground-based monitoring infrastructure makes satellite-based analysis essential.</p>
         </div>
         <div class="image-section">
-            <img src="../assets/img/an11.jpg" alt="redirect now!" title="do not wait, redirect now to app - DRC Wildfire Risk Map" onclick="window.location.href = targetUrl;">
+            <img src="../assets/img/an11.jpg" alt="redirect now!" title="do not wait, redirect now to app - DRC Wildfire Risk Map" onclick="window.location.href='05_app.html';">
         </div>
-        <div class="redirect-notice">
-            <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
+        <div class="redirect-notice" id="notice">
+            <p>Click the image above to open the application in full screen.</p>
         </div>
     </div>
 
     <script>
-        let timeLeft = 15;
-        const countdownElement = document.getElementById('countdown');
-        var targetUrl = 'https://wildfire-index-zair.vercel.app/';
-
-        // Update countdown every second
-        const countdownInterval = setInterval(() => {
-            timeLeft--;
-            countdownElement.textContent = timeLeft;
-            
-            if (timeLeft <= 0) {
-                clearInterval(countdownInterval);
-                window.location.href = targetUrl;
-            }
-        }, 1000);
-
-        // Redirect after 30 seconds
-        setTimeout(() => {
-            window.location.href = targetUrl;
-        }, 15000);
+        // the app is loaded on click
     </script>
 </body>
 </html>

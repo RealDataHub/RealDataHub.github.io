@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Art Residencies Across North America - Mapping and classification project exploring geographic distribution of artist residency programs.">
-    <link rel="canonical" href="https://art-residences-america.vercel.app/">
+    <link rel="canonical" href="06_app.html">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Art Residencies Across North America</title>
     <style>
@@ -69,33 +69,15 @@
             <p>The app enables filtering by discipline type, allowing users to explore all creative fields supported within each residency. Direct links to official residency websites are provided, giving access to current open calls and application information.</p>
         </div>
         <div class="image-section">
-            <img src="../assets/img/an12.jpg" alt="redirect now!" title="do not wait, redirect now to app - USA art residences" onclick="window.location.href = targetUrl;">
+            <img src="../assets/img/an12.jpg" alt="redirect now!" title="do not wait, redirect now to app - USA art residences" onclick="window.location.href='06_app.html';">
         </div>
-        <div class="redirect-notice">
-            <p>Redirecting to the application in <span id="countdown">15</span> seconds...</p>
+        <div class="redirect-notice" id="notice">
+            <p>Click the image above to open the application in full screen.</p>
         </div>
     </div>
 
     <script>
-        let timeLeft = 15;
-        const countdownElement = document.getElementById('countdown');
-        var targetUrl = 'https://art-residences-america.vercel.app/';
-
-        // Update countdown every second
-        const countdownInterval = setInterval(() => {
-            timeLeft--;
-            countdownElement.textContent = timeLeft;
-            
-            if (timeLeft <= 0) {
-                clearInterval(countdownInterval);
-                window.location.href = targetUrl;
-            }
-        }, 1000);
-
-        // Redirect after 30 seconds
-        setTimeout(() => {
-            window.location.href = targetUrl;
-        }, 15000);
+        // the app is loaded on click
     </script>
 </body>
 </html>
